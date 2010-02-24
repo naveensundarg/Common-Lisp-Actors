@@ -1,4 +1,4 @@
-This is a simple and easy to use Actor system in Common Lisp. There is no guarantee on its robustness! 
+This is a simple and easy to use Actor system in Common Lisp. 
 
 ****** Set-Up ************
 1. Requires Bordeaux threads. http://common-lisp.net/project/bordeaux-threads/ 2. Just load actors.lisp and start using it. 
