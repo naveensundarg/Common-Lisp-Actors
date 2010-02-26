@@ -58,9 +58,5 @@
 ;Easy priting to repl from threads.
 (defun pr (x) (print x #.*standard-output*))
 
-;Invokes the Mac OS X say program and does TTS.
-(defun say (str) (trivial-shell:shell-command 
-			   (concatenate 'string "say " (write-to-string str))))
-
 ;A printing actor 
 (defactor printer () (x) (pr x) next)
