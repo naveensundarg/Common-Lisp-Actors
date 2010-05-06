@@ -1,4 +1,4 @@
-(use-package :bordeaux-threads)
+(in-package #:cl-actors)
 
 ; Create a behavior that can be attached to any actor
 (defmacro behav (state vars  &body body)
