@@ -14,7 +14,7 @@
   :version     "1.0"
   :licence     "GPL"
   :description ""
-  :depends-on ("bordeaux-threads")
+  :depends-on (:bordeaux-threads)
   :components ((:file "package")
                (:file "actors" :depends-on ("package"))))
 

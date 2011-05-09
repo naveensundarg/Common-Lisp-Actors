@@ -1,7 +1,7 @@
-(defactor cell (c) ( message)
+(defactor cell (c) (message)
   (cond ((get? message) (send (cust message)  c))
-	((set? message) (setf c (contents message)))) 
-next)
+	((set? message) (setf c (contents message))))
+  next)
 
 (defun make-set (val) `("set" ,val))
 (defun make-get (cust) `("get" ,cust)) 
