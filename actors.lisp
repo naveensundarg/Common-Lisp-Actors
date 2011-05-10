@@ -46,9 +46,9 @@
 (defun stop-actor (actor) (destroy-thread (get-thread actor)))
 
 (defun if-single (x) (if (eq (length x) 1) (car x) x))
-(defun get-thread (actor)(first actor))
+(defun get-thread (actor) (first actor))
 (defun get-add (actor) (second actor))
-(defun sink(&rest args) #'sink)
+(defun sink (&rest args) (declare (ignore args)) #'sink)
 
 ;Currying. 
 (defun curry (f &rest args)
@@ -56,7 +56,7 @@
 	     (apply f (append rem args) )))
 
 ;Easy priting to repl from threads.
-(defun pr (x) (print x #.*standard-output*))
+(defun pr (x) (print x *standard-output*))
 
 ;A printing actor 
 (defactor printer () (x) (pr x) next)
