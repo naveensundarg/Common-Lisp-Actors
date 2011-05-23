@@ -25,7 +25,7 @@
 	(cv (make-condition-variable)))
     (labels ((add (m) 
 	       (with-lock-held (lock) 
-		 (push m messages))
+		 (setf messages (nconc messages (list m))))
 	       (condition-notify cv))
 	     (run-actor () (loop
 			      (thread-yield)
