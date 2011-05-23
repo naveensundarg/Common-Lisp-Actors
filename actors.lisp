@@ -33,7 +33,8 @@
 				(if (not (null messages))
 				    (setf behav (apply behav 
 						       (pop messages)))
-				    (condition-wait cv lock )))))) 
+				    (condition-wait cv lock ))
+				(unless behav (return)))))) 
 	(setf self
 	      (list (make-thread #'run-actor)
 		#'add
