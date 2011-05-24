@@ -15,10 +15,10 @@
 	       (if next-supplied-p
 		  (setf next (curry next :self self)))
 	       ,@body))
-      (setf self (make-actor #'me)) self)))
+      (setf self (make-actor #'me ,(string name))) self)))
 
 ; The shell of an actor
-(defun make-actor (behav)
+(defun make-actor (behav name)
   (let (self 
 	(lock (make-lock)) 
 	(messages '())
@@ -36,7 +36,7 @@
 				    (condition-wait cv lock ))
 				(unless behav (return)))))) 
 	(setf self
-	      (list (make-thread #'run-actor)
+	      (list (make-thread #'run-actor :name (concatenate 'string "Actor: " name))
 		#'add
 		messages)))))
 
