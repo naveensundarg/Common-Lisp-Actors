@@ -5,7 +5,7 @@
 ;;;; @author Naveen Sundar G. <naveensundarg@gmail.com>
 ;;;; @date   Thu Apr 5 2012
 ;;;; @brief asdf-install package file for cl-actors
-;;;;===========================================================================        
+;;;;===========================================================================
 
 (defpackage #:cl-actors-asd (:use #:asdf #:cl))
 (in-package :cl-actors-asd)
