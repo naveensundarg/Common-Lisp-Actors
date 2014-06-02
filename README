@@ -71,3 +71,8 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
           (send self) next)
 ; anonymous actor , no way to stop the nagging 
 (send (nagger))
+
+****** More Resources ************ 
+
+1. [Meta-Circular Adventures in Functional Abstraction – Challenging Clojure in Common Lisp
+](http://chriskohlhepp.wordpress.com/metacircular-adventures-in-functional-abstraction-challenging-clojure-in-common-lisp/)
