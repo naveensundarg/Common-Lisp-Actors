@@ -19,8 +19,8 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
  - Creating an actor instance 
      ```lisp
 (setq my-actor (Actor-Class (:state-var_1 value_1 ...
-   	 	  	        :state-var_n value_n)))
-```
+   	 	  	        :state-var_n value_n)))```
+
 -  Sending a message
      ```lisp
 (send my-actor message_args)```
