@@ -1,9 +1,11 @@
 This is a simple and easy to use Actor system in Common Lisp. 
 
-****** Set-Up ************
+# Set-Up
 1. Requires Bordeaux threads. http://common-lisp.net/project/bordeaux-threads/ 2. Just load actors.lisp and start using it. 
 
-****** Usage ************
+If you have Quicklisp, ```(ql:quickload "cl-actors")```
+
+# Usage 
 An small manual can be found at : 
 http://www.cs.rpi.edu/~govinn/actors.pdf
 
@@ -20,12 +22,12 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 3. Sending a message
    (send my-actor message_args)
 
-****** Features ************
+# Features 
 
 1. Concurrency using the actors model.
 2. Dynamic behavior change of actors.
 
-****** Examples ************
+# Examples 
 
 1. A ticker: Keeps printing out a count every 2 seconds, starting from 0 and incrementing it every 2 seconds. 
 
@@ -72,6 +74,6 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ; anonymous actor , no way to stop the nagging 
 (send (nagger))
 
-****** More Resources ************ 
+# More Resources
 
 1. Meta-Circular Adventures in Functional Abstraction –Challenging Clojure in Common Lisp: http://chriskohlhepp.wordpress.com/metacircular-adventures-in-functional-abstraction-challenging-clojure-in-common-lisp/
