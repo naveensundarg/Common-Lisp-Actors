@@ -5,7 +5,7 @@ This is a simple and easy to use Actor system in Common Lisp.
 Requires Bordeaux threads. http://common-lisp.net/project/bordeaux-threads/ 2. Just load actors.lisp and start using it. 
 If you have Quicklisp, ```(ql:quickload "cl-actors")```
 
-***
+
 
 ## Usage 
 An small manual can be found at : 
@@ -29,14 +29,14 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
      ```lisp 
         (send my-actor message_args)
 	```
-***
+
 
 ## Features 
 
 1. Concurrency using the actors model.
 2. Dynamic behavior change of actors.
 
-***
+
 
 # Examples 
 
@@ -92,7 +92,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ; anonymous actor , no way to stop the nagging 
 (send (nagger))
 	```
-***
+
 
 ## More Resources
 
