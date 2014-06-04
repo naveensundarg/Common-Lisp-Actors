@@ -10,17 +10,20 @@ An small manual can be found at :
 http://www.cs.rpi.edu/~govinn/actors.pdf
 
 1. Creating an actor class or template
-  (defactor Actor-Class
+  ```lisp
+	(defactor Actor-Class
             (state)
 	    (message-vars)
-	    behavior)
+	    behavior)```
 
 2. Creating an actor instance 
-   (setq my-actor (Actor-Class (:state-var_1 value_1 ...
+     ```lisp
+(setq my-actor (Actor-Class (:state-var_1 value_1 ...
    	 	  	        :state-var_n value_n)))
-
+```
 3. Sending a message
-   (send my-actor message_args)
+     ```lisp
+(send my-actor message_args)```
 
 # Features 
 
@@ -31,6 +34,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 
 1. A ticker: Keeps printing out a count every 2 seconds, starting from 0 and incrementing it every 2 seconds. 
 
+  ```lisp
 ;create the ticker template
 (defactor ticker ((counter 0)) (m) 
 	     (sleep 2) (pr counter)
@@ -40,19 +44,21 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ; send a message (async)
 (send t1 nil)
 ; to stop use
-(stop-actor t1)
+(stop-actor t1)```
 
 2. A print actor: Prints the message which was sent to it. A very useful utility actor. 
 
+  ```lisp
 ;create the actor template
 (defactor print-actor () (val) (pr val) next)
 ; initialize a new instance
 (setf printer (print-actor))
 ;send values for printing
-(send printer "hello, world")
+(send printer "hello, world")```
 
 3. A factorial computing actor : The name says it all :)
 
+  ```lisp
 ;create the template
 (defactor fact ((temp 1)) (n cust) 
 	     (if (equal 1 n) 
@@ -63,17 +69,18 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ;create a new instance 
 (setf f (fact))
 ; send a value
-(send f 4 print-actor)
+(send f 4 print-actor)```
 
 4. A nagger for fun : Works only in Mac OS X. Keeps saying out aloud "please work" every 10 seconds :)
 
- (defactor nagger () () 
+   ```lisp
+(defactor nagger () () 
     (sleep 10)
        (trivial-shell:shell-command "say please work")
           (send self) next)
 ; anonymous actor , no way to stop the nagging 
-(send (nagger))
+(send (nagger))```
 
 # More Resources
 
-1. Meta-Circular Adventures in Functional Abstraction –Challenging Clojure in Common Lisp: http://chriskohlhepp.wordpress.com/metacircular-adventures-in-functional-abstraction-challenging-clojure-in-common-lisp/
+1. [Meta-Circular Adventures in Functional Abstraction –Challenging Clojure in Common Lisp] (http://chriskohlhepp.wordpress.com/metacircular-adventures-in-functional-abstraction-challenging-clojure-in-common-lisp/)
