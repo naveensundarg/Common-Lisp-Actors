@@ -17,13 +17,13 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 	    behavior)```
 
  - Creating an actor instance 
-     ```lisp
-(setq my-actor (Actor-Class (:state-var_1 value_1 ...
+     ```lisp 
+        (setq my-actor (Actor-Class (:state-var_1 value_1 ...
    	 	  	        :state-var_n value_n)))```
 
 -  Sending a message
-     ```lisp
-(send my-actor message_args)```
+     ```lisp 
+        (send my-actor message_args)```
 
 # Features 
 
@@ -32,7 +32,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 
 # Examples 
 
-1. A ticker: Keeps printing out a count every 2 seconds, starting from 0 and incrementing it every 2 seconds. 
+- A ticker: Keeps printing out a count every 2 seconds, starting from 0 and incrementing it every 2 seconds. 
 
   ```lisp
 ;create the ticker template
@@ -46,7 +46,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ; to stop use
 (stop-actor t1)```
 
-2. A print actor: Prints the message which was sent to it. A very useful utility actor. 
+- A print actor: Prints the message which was sent to it. A very useful utility actor. 
 
   ```lisp
 ;create the actor template
@@ -56,7 +56,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ;send values for printing
 (send printer "hello, world")```
 
-3. A factorial computing actor : The name says it all :)
+- A factorial computing actor : The name says it all :)
 
   ```lisp
 ;create the template
@@ -71,7 +71,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ; send a value
 (send f 4 print-actor)```
 
-4. A nagger for fun : Works only in Mac OS X. Keeps saying out aloud "please work" every 10 seconds :)
+- A nagger for fun : Works only in Mac OS X. Keeps saying out aloud "please work" every 10 seconds :)
 
    ```lisp
 (defactor nagger () () 
