@@ -20,7 +20,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 	```
 
 
- - Creating an actor instance 
+- Creating an actor instance 
      
 	```lisp 
         (setq my-actor (Actor-Class (:state-var_1 value_1 ...
