@@ -1,27 +1,27 @@
 This is a simple and easy to use Actor system in Common Lisp. 
 
 # Set-Up
-1. Requires Bordeaux threads. http://common-lisp.net/project/bordeaux-threads/ 2. Just load actors.lisp and start using it. 
 
+Requires Bordeaux threads. http://common-lisp.net/project/bordeaux-threads/ 2. Just load actors.lisp and start using it. 
 If you have Quicklisp, ```(ql:quickload "cl-actors")```
 
 # Usage 
 An small manual can be found at : 
 http://www.cs.rpi.edu/~govinn/actors.pdf
 
-1. Creating an actor class or template
+- Creating an actor class or template
   ```lisp
 	(defactor Actor-Class
             (state)
 	    (message-vars)
 	    behavior)```
 
-2. Creating an actor instance 
+ - Creating an actor instance 
      ```lisp
 (setq my-actor (Actor-Class (:state-var_1 value_1 ...
    	 	  	        :state-var_n value_n)))
 ```
-3. Sending a message
+-  Sending a message
      ```lisp
 (send my-actor message_args)```
 
