@@ -14,16 +14,19 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 	(defactor Actor-Class
             (state)
 	    (message-vars)
-	    behavior)```
+	    behavior)
+	```
 
  - Creating an actor instance 
      ```lisp 
         (setq my-actor (Actor-Class (:state-var_1 value_1 ...
-   	 	  	        :state-var_n value_n)))```
+   	 	  	        :state-var_n value_n)))
+	```
 
 -  Sending a message
      ```lisp 
-        (send my-actor message_args)```
+        (send my-actor message_args)
+	```
 
 # Features 
 
@@ -44,17 +47,19 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ; send a message (async)
 (send t1 nil)
 ; to stop use
-(stop-actor t1)```
+(stop-actor t1)
+```
 
 - A print actor: Prints the message which was sent to it. A very useful utility actor. 
 
   ```lisp
-;create the actor template
+	;create the actor template
 (defactor print-actor () (val) (pr val) next)
 ; initialize a new instance
 (setf printer (print-actor))
 ;send values for printing
-(send printer "hello, world")```
+(send printer "hello, world")
+```
 
 - A factorial computing actor : The name says it all :)
 
@@ -69,7 +74,8 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 ;create a new instance 
 (setf f (fact))
 ; send a value
-(send f 4 print-actor)```
+(send f 4 print-actor)
+```
 
 - A nagger for fun : Works only in Mac OS X. Keeps saying out aloud "please work" every 10 seconds :)
 
@@ -79,7 +85,8 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
        (trivial-shell:shell-command "say please work")
           (send self) next)
 ; anonymous actor , no way to stop the nagging 
-(send (nagger))```
+(send (nagger))
+	```
 
 # More Resources
 
