@@ -11,10 +11,10 @@
 (in-package :cl-actors-asd)
 
 (defsystem cl-actors
-  :author      "Nikhil Shetty <nikhil.j.shetty@gmail.com>"
+  :author      "Naveen Sundar G. <naveensundarg@gmail.com>"
   :version     "1.0"
-  :licence     "BSD"
-  :description ""
+  :description "A simple common lisp actors library."
+  :license "BSD"
   :depends-on (:bordeaux-threads)
   :components ((:file "package")
                (:file "actors" :depends-on ("package"))))
