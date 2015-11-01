@@ -14,6 +14,7 @@
   :author      "Naveen Sundar G. <naveensundarg@gmail.com>"
   :version     "1.0"
   :description "A simple common lisp actors library."
+  :license "BSD"
   :depends-on (:bordeaux-threads)
   :components ((:file "package")
                (:file "actors" :depends-on ("package"))))
