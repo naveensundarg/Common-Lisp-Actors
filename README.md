@@ -98,5 +98,6 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 
 ## More Resources
 
-1. The wonderful and detailed original blog post is no longer availabe. The link below points to a snaphost. 
-[Meta-Circular Adventures in Functional Abstraction –Challenging Clojure in Common Lisp] (https://hackerfall.com/story/challenging-clojure-in-common-lisp)
+### Meta-Circular Adventures in Functional Abstraction
+The wonderful and detailed original blog post is no longer availabe. The link below points to a snaphost. 
+	https://hackerfall.com/story/challenging-clojure-in-common-lisp
