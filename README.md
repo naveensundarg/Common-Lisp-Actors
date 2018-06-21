@@ -44,7 +44,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 
 - A ticker: Keeps printing out a count every 2 seconds, starting from 0 and incrementing it every 2 seconds. 
 
-  ```lisp
+```lisp
 ;create the ticker template
 (defactor ticker ((counter 0)) (m) 
 	     (sleep 2) (pr counter)
@@ -59,7 +59,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 
 - A print actor: Prints the message which was sent to it. A very useful utility actor. 
 
-  ```lisp
+```lisp
 	;create the actor template
 (defactor print-actor () (val) (pr val) next)
 ; initialize a new instance
@@ -70,7 +70,7 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 
 - A factorial computing actor : The name says it all :)
 
-  ```lisp
+```lisp
 ;create the template
 (defactor fact ((temp 1)) (n cust) 
 	     (if (equal 1 n) 
@@ -86,18 +86,18 @@ http://www.cs.rpi.edu/~govinn/actors.pdf
 
 - A nagger for fun : Works only in Mac OS X. Keeps saying out aloud "please work" every 10 seconds :)
 
-   ```lisp
+```lisp
 (defactor nagger () () 
     (sleep 10)
        (trivial-shell:shell-command "say please work")
           (send self) next)
 ; anonymous actor , no way to stop the nagging 
 (send (nagger))
-	```
+```
 
 
 ## More Resources
 
-### Meta-Circular Adventures in Functional Abstraction
+1. **Meta-Circular Adventures in Functional Abstraction**
 The wonderful and detailed original blog post is no longer availabe. The link below points to a snaphost. 
 	https://hackerfall.com/story/challenging-clojure-in-common-lisp
