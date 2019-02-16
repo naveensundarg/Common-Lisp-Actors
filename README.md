@@ -8,7 +8,7 @@ If you have Quicklisp, ```(ql:quickload "cl-actors")```
 
 
 ## Usage 
-An small manual can be found at : 
+A small manual can be found at : 
 http://www.cs.rpi.edu/~govinn/actors.pdf
 
 - Creating an actor class or template
