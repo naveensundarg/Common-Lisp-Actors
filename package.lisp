@@ -11,6 +11,7 @@
   (:use #:cl
         #:bordeaux-threads)
   (:export :defactor
+           :self
            :next
            :behav
            :send
