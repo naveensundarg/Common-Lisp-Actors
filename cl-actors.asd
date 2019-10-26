@@ -12,7 +12,7 @@
 
 (defsystem cl-actors
   :author      "Naveen Sundar G. <naveensundarg@gmail.com>"
-  :version     "1.0"
+  :version     "1.1.0"
   :description "A simple common lisp actors library."
   :license "BSD"
   :depends-on (:bordeaux-threads)
